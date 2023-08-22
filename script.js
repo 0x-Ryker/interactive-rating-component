@@ -40,7 +40,7 @@ const ratePick = document.getElementById("user-rating");
 
 
 function displayUserRating() {
-  ratingContainer.style.display = "none";
+  ratingList.style.display = "none";
   appreciationContainer.style.display = "flex";
 }
 
