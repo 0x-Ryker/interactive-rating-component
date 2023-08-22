@@ -159,3 +159,33 @@ body {
     font-size: 30px;
     color: hsl(0, 0%, 100%);
   }
+
+
+  /* media query */
+  @media screen and (max-width: 380px) {
+
+  .flex-item {
+    width: 80%;
+  }
+
+  .rating-wrapper {
+    flex-wrap: wrap;
+  }
+
+  .modal-items {
+  width: 80%;
+    position: absolute;
+  }
+
+.close {
+    position:  relative;
+    top: 10px;
+    left: 130px;
+  }
+  }
+
+  @media screen and (max-width: 320px) {
+    .close {
+      left: 110px;
+    }
+  }
