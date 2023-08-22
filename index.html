@@ -25,7 +25,7 @@
   </head>
   <body>
     <main class="main-container">
-      <section class="flex-item">
+      <section class="flex-item" id="page-preview">
         <img src="images/icon-star.svg" alt="star icon" class="star-icon" />
         <!-- Rating state start -->
 
@@ -37,29 +37,26 @@
           improve our offering!
         </p>
 
-        <div class="rating-wrapper">
-          <div class="rating-item one">1</div>
-          <div class="rating-item two">2</div>
-          <div class="rating-item three">3</div>
-          <div class="rating-item four">4</div>
-          <div class="rating-item five">5</div>
+        <div class="rating-wrapper" id="rating-list">
+          <button class="rating-item" value="1">1</button>
+          <button class="rating-item" value="2">2</button>
+          <button class="rating-item" value="3">3</button>
+          <button class="rating-item" value="4">4</button>
+          <button class="rating-item" value="5">5</button>
         </div>
 
-        <button type="submit" class="submit-btn">Submit</button>
+        <button type="submit" id="submit-btn">Submit</button>
       </section>
     </main>
     <!-- Rating state end -->
 
     <!-- Thank you state start -->
 
-    <div class="modal-container main-container">
+    <div class="main-container modal" id="modal-container">
       <section class="modal-items flex-item">
+        <span class="close">&times;</span>
         <img src="images/illustration-thank-you.svg" alt="thank you icon" />
-        <p class="user-rating-pick">
-          You selected
-          <!-- Add rating here -->
-          out of 5
-        </p>
+        <p class="user-rating-pick" id="user-rating"></p>
         <h1 class="modal-heading">Thank you!</h1>
         <p>
           We appreciate you taking the time to give a rating. <br />
@@ -76,5 +73,7 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">0x_Ryker</a>.
     </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
