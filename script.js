@@ -10,16 +10,24 @@ var pagePreview = document.getElementById("page-preview");
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks the button, open the modal 
-btn.onclick = function() {
+btn.onclick = function(displayUserRating) {
   modal.style.visibility = "visible";
-//   pagePreview.style.display = "none";
+  pagePreview.style.display = "none";
 }
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
-  modal.style.display = "none";
+  modal.style.visibility = "hidden";
+  pagePreview.style.display = "block";
 }
 
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.visibility = "hidden";
+    pagePreview.style.display = "block";
+  }
+}
 
 // active state
 let buttons = document.querySelectorAll('button');
