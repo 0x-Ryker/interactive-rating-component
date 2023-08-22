@@ -21,7 +21,6 @@ span.onclick = function() {
 }
 
 
-
 // active state
 let buttons = document.querySelectorAll('button');
 
@@ -31,3 +30,27 @@ buttons.forEach(button => {
         this.classList.add('active');        
     });
 });
+
+
+// Display user rating number on modal
+const RatingItems = document.querySelectorAll(".rating-item");
+const ratingList = document.getElementById("rating-list");
+const appreciationContainer = document.getElementById("modal-container");
+const ratePick = document.getElementById("user-rating");
+
+
+function displayUserRating() {
+  ratingContainer.style.display = "none";
+  appreciationContainer.style.display = "flex";
+}
+
+for (let x of RatingItems) {
+  x.addEventListener("click", () => {
+    ratePick.innerHTML = `You selected ${x.value} out of 5`
+  });
+}
+
+
+
+
+
